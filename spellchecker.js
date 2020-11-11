@@ -1,6 +1,4 @@
-import {words} from './englishWords.js'
-
-export function findSimilar(word){
+function findSimilar(word){
     const max_size = 10;
     let top_words = [];
     let top_scores = [];
@@ -48,7 +46,7 @@ function lengthScore(word, comparingWord){
 
 function matchScore(word, comparingWord){
     let length = Math.min(word.length, comparingWord.length);
-    if(length <= 0) return 0.0;
+    if(length === 0) return 0.0;
 
     let total = 0;
     for(let i = 0; i < length; i++){

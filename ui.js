@@ -1,4 +1,3 @@
-import {findSimilar} from './spellchecker.js';
 document.getElementById('button').onclick = () => {
     const word = document.getElementById('lookupText').value.toLowerCase();
     const result = findSimilar(word);
